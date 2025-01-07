@@ -2,14 +2,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MCTwoToFourEndpoints.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MCTwoToFourEndpoints.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class TwoQuestionController : ControllerBase
     {
+        private readonly TwoQuestionServices _twoQuestionServices;
+
+        public TwoQuestionController(TwoQuestionServices twoQuestionServices)
+        {
+            _twoQuestionServices = twoQuestionServices;
+        }
+
+        [HttpGet]
+        [Route("TwoQuestions/{userName}/{wakeUpTime}")]
+
+        public string twoQuestion(string userName, int wakeUpTime)
+        {
+            return _twoQuestionServices.twoQuestion(userName,wakeUpTime);
+        }
         
     }
 }
