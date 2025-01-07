@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MCTwoToFourEndpoints.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,17 +16,10 @@ namespace MCTwoToFourEndpoints.Controllers
 
 
         [HttpGet]
-        [Route("Add")]
+        [Route("Add/{num1}/{num2}")]
         public string addTwoNumbers(int num1, int num2)
         {
             return _addTwoNumServices.addTwoNumers(num1, num2);
-        }
-
-
-
-
-
-
-        
+        }  
     }
 }
