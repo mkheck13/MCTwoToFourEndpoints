@@ -29,6 +29,6 @@ Endpoints:
 
 ## FeedBack/Peer Review:
 
-**Reviewer:**
+**Reviewer:** Bronel Lazar
 
-**Comments:**
+**Comments:** Good job! Everything works, and is linked up properly. When asking the user for the time the woke up, it doesnt allow for AM or PM but thats not too big of a deal. Not too much else to say, so great work.
